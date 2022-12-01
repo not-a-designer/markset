@@ -1,0 +1,35 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide></ion-menu-button>
+    </ion-buttons>
+    <ion-searchbar></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button fill="solid" color="primary">
+        <ion-icon slot="start" name="star"></ion-icon>
+        <ion-label class="ion-hide-lg-down">Add</ion-label>
+        <ion-icon slot="end" name="caret-down"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding">
+  <ion-item lines="full" style.--padding-end="0" style.--inner-padding-end="0">
+    <ion-icon slot="start" name="cloud-outline"></ion-icon>
+    <ion-label>All Bookmarks</ion-label>
+    <ng-container slot="end">
+      <ion-button (click)="presentSortPopover($event)">
+        <ion-icon class="ion-hide-lg-down" slot="start" name="funnel"></ion-icon>
+        <ion-label class="ion-hide-lg-down">Sort</ion-label>
+        <ion-icon class="ion-hide-lg-up" slot="icon-only" name="funnel"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="presentViewPopover($event)">
+        <ion-icon class="ion-hide-lg-down" slot="start" name="list"></ion-icon>
+        <ion-label class="ion-hide-lg-down">View</ion-label>
+        <ion-icon class="ion-hide-lg-up" slot="icon-only" name="list"></ion-icon>
+      </ion-button>
+    </ng-container>
+  </ion-item>
+</ion-content>
